@@ -71,6 +71,8 @@ nextBtn.onclick =function(){
     description.textContent = pages[currentIndex].description
 
 }
+
+// phần active tab 
 const buttons = document.querySelectorAll(".btnChoice"); // lấy các thẻ có class là btnChoice
 const lists = document.querySelectorAll(".choice__list");//lấy các thẻ có class là choice__list
 
@@ -91,6 +93,7 @@ for (let i = 0; i < buttons.length; i++) {
     lists[i].classList.add("active"); //thêm class active
   });
 }
+
 
 
 
