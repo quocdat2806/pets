@@ -655,6 +655,10 @@ a {
     text-align: center;
     color: #656689;
 }
+.choice__list-wrapper{
+    display: flex;
+
+}
 /*--------------------------- choice node  */
 .choice__wrap-label {
     user-select: none;
@@ -708,6 +712,13 @@ a {
     display: grid;
     column-gap: 44px;
     grid-template-columns: 1fr 1fr 1fr;
+}
+
+.choice__list.active{
+    display: grid;
+}
+.choice__list {
+    display: none;
 }
 .choice__list-item {
     padding: 30px 28px 0px 28px;

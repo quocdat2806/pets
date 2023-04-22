@@ -8,8 +8,6 @@ const tabActive = $(".vacation__item.vacation__item--active");
 const dash = $(".vacation__dash");
 dash.style.width = tabActive.offsetWidth + "px";
 dash.style.left = tabActive.offsetLeft + "px";
-console.log({dash});
-console.log(tabActive.offsetWidth)
 item.forEach((tab, index) => {
     const description = desc[index];
     tab.onclick = function (e) {
@@ -73,7 +71,26 @@ nextBtn.onclick =function(){
     description.textContent = pages[currentIndex].description
 
 }
+const buttons = document.querySelectorAll(".btnChoice"); // lấy các thẻ có class là btnChoice
+const lists = document.querySelectorAll(".choice__list");//lấy các thẻ có class là choice__list
 
+for (let i = 0; i < buttons.length; i++) {
+  buttons[i].addEventListener("click", function() { // lắng nghe sự kiện onclick
+    const activeButton = document.querySelector(".btnChoice.active");//lấy ra btn đang được active
+    const activeList = document.querySelector(".choice__list.active");//lấy ra thẻ div đang được active
+
+    if (activeButton) { // nếu có class là active thì xóa đi
+      activeButton.classList.remove("active");
+    }
+    if (activeList) {//có thẻ div nào đang có class là active thì xóa
+
+      activeList.classList.remove("active");
+    }
+
+    buttons[i].classList.add("active");//thêm class actie
+    lists[i].classList.add("active"); //thêm class active
+  });
+}
 
 
 
